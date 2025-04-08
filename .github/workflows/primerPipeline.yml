@@ -1,0 +1,12 @@
+name: Primer Pipeline
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    Mostrar_Hora:
+        runs-on: ubuntu-20.04
+        steps:
+            - name: Imprimir Hora
+              run: date
