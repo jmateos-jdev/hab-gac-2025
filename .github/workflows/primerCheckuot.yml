@@ -10,12 +10,23 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4.2.2  
-              
+
             - name: Conocer versión de Node
               run: node -v
 
             - name: Conocer versión de npm
               run: npm -v
-              
+
+            - name: Actualizar Node
+              uses: actions/setup-node@v4.3.0
+              with:
+                node-version: 22
+
+            - name: Conocer versión de Node
+              run: node -v
+  
+            - name: Conocer versión de npm
+              run: npm -v
+            
               
               
