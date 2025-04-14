@@ -16,7 +16,7 @@ jobs:
     pepito:
         strategy:
           matrix:
-            os: [ubuntu-22, windows-2022, macos-14]
+            os: [ubuntu-latest, windows-2022, macos-14]
             node: [22.x, 20.x, 18.x]
         runs-on: ${{ matrix.os }}
         steps:
