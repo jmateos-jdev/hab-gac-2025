@@ -20,7 +20,7 @@ jobs:
             - name: Actualizar Node
               uses: actions/setup-node@v4.3.0
               with:
-                node-version: 22
+                node-version: 22.11.0
 
             - name: Conocer versión de Node
               run: node -v
