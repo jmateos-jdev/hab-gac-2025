@@ -6,23 +6,6 @@ on:
       - main
 
 jobs:
-  prettier:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.2.2
-
-      - name: Actualizar Node a 22.11.0
-        uses: actions/setup-node@v4.3.0
-        with:
-          node-version: 22.11.0
-
-      - name: Instalar Prettier
-        run: npm install -g prettier
-
-      - name: Ejecutar Prettier
-        run: prettier --check .
-
   vitest:
     needs: prettier
     runs-on: ubuntu-latest
@@ -40,3 +23,20 @@ jobs:
 
       - name: Ejecutar tests
         run: npm run test
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Actualizar Node a 22.11.0
+        uses: actions/setup-node@v4.3.0
+        with:
+          node-version: 22.11.0
+
+      - name: Instalar Prettier
+        run: npm install -g prettier
+
+      - name: Ejecutar Prettier
+        run: prettier --check .
