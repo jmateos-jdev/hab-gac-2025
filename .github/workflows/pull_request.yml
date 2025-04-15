@@ -25,7 +25,6 @@ jobs:
         run: npm run build
 
   vitest:
-    needs: prettier
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
