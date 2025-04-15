@@ -1,44 +1,38 @@
 name: Primer Checkout
 
 on:
-    pull_request:
-        branches: [main]
+  push:
+    branches: [main]
 
-    push:
-        branches: [main]
-
-    schedule:
-        - cron: '38 15 * * *'
-        # MINUTOS HORAS DÍA MES DÍA-DE-LA-SEMANA
-    workflow_dispatch:
+  schedule:
+    - cron: "38 15 * * *"
+    # MINUTOS HORAS DÍA MES DÍA-DE-LA-SEMANA
+  workflow_dispatch:
 
 jobs:
-    pepito:
-        strategy:
-          matrix:
-            os: [ubuntu-latest, windows-2022, macos-14]
-            node: [22.x, 20.x]
-        runs-on: ${{ matrix.os }}
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4.2.2  
+  pepito:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-2022, macos-14]
+        node: [22.x, 20.x]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
 
-            - name: Conocer versión de Node
-              run: node -v
+      - name: Conocer versión de Node
+        run: node -v
 
-            - name: Conocer versión de npm
-              run: npm -v
+      - name: Conocer versión de npm
+        run: npm -v
 
-            - name: Actualizar Node
-              uses: actions/setup-node@v4.3.0
-              with:
-                node-version: ${{ matrix.node }}
+      - name: Actualizar Node
+        uses: actions/setup-node@v4.3.0
+        with:
+          node-version: ${{ matrix.node }}
 
-            - name: Conocer versión de Node
-              run: node -v
-  
-            - name: Conocer versión de npm
-              run: npm -v
-            
-              
-              
+      - name: Conocer versión de Node
+        run: node -v
+
+      - name: Conocer versión de npm
+        run: npm -v

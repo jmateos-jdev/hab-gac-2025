@@ -1,11 +1,11 @@
 name: Primer Pipeline
 
 on:
-    workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
-    Mostrar_Hora:
-        runs-on: ubuntu-22.04
-        steps:
-            - name: Imprimir Hora
-              run: date
+  Mostrar_Hora:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Imprimir Hora
+        run: date
