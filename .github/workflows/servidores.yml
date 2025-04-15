@@ -1,0 +1,25 @@
+name: Servidores
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: IpInfo
+        run: |
+          curl ipinfo.io
+  Windows:
+    runs-on: windows-latest
+    steps:
+      - name: IpInfo
+        run: |
+          curl ipinfo.io
+
+  Macos:
+    runs-on: macos-latest
+    steps:
+      - name: IpInfo
+        run: |
+          curl ipinfo.io
