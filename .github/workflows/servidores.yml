@@ -10,12 +10,19 @@ jobs:
       - name: IpInfo
         run: |
           curl ipinfo.io
+      - name: Mostar hora
+        run: |
+          date
+
   Windows:
     runs-on: windows-latest
     steps:
       - name: IpInfo
         run: |
           curl ipinfo.io
+      - name: Mostar hora
+        run: |
+          date
 
   Macos:
     runs-on: macos-latest
@@ -23,3 +30,6 @@ jobs:
       - name: IpInfo
         run: |
           curl ipinfo.io
+      - name: Mostar hora
+        run: |
+          date
