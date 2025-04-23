@@ -21,7 +21,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           Contador: {count}
         </button>
-        <p>RAMA AAI-74</p>
+        <p>Despliegue Automático en Vercel y Netlify</p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
